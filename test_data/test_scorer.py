@@ -1,5 +1,5 @@
-from parser import extract_resume_text
-from scorer import score_resume
+from core.parser import extract_resume_text
+from core.scorer import score_resume
 
 # -----------------------------------
 # Load Resume

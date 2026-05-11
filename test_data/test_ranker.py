@@ -1,4 +1,4 @@
-from ranker import rank_resumes
+from core.ranker import rank_resumes
 
 # -----------------------------------
 # Sample JD

@@ -1,6 +1,6 @@
-from ranker import rank_resumes
+from core.ranker import rank_resumes
 
-from report_generator import (
+from core.report_generator import (
     save_json_report,
     save_html_report
 )

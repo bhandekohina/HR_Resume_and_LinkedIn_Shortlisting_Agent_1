@@ -1,4 +1,4 @@
-from parser import extract_resume_text
+from core.parser import extract_resume_text
 
 resume_path = "resumes/resume.pdf"
 
