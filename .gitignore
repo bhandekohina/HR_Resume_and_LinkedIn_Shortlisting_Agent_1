@@ -35,4 +35,4 @@ outputs/
 
 # Misc
 *.sqlite3
-*.fileloc
+*.fileloc.DS_Store
