@@ -1,0 +1,38 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# Environment variables (IMPORTANT)
+.env
+.env.save
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# OS files
+.DS_Store
+
+# Logs & temp files
+*.log
+temp_uploads/
+
+# Output files
+outputs/
+!outputs/.gitkeep
+
+# Tests & cache
+.pytest_cache/
+.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+
+# Misc
+*.sqlite3
+*.fileloc

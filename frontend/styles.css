@@ -1,0 +1,620 @@
+Styles.css
+
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #f5f5f0;
+    min-height: 100vh;
+}
+
+/* ────────────────────────────────────────────────── */
+/* Streamlit Overrides
+/* ────────────────────────────────────────────────── */
+
+#MainMenu, footer, header {
+    visibility: hidden;
+}
+
+.block-container {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+    max-width: 1200px !important;
+}
+
+.stApp {
+    background: #f5f5f0 !important;
+}
+
+/* ────────────────────────────────────────────────── */
+/* Color Variables
+/* ────────────────────────────────────────────────── */
+
+:root {
+    /* Purple theme */
+    --purple: #534AB7;
+    --purple-light: #EEEDFE;
+    --purple-mid: #AFA9EC;
+    --purple-dark: #3C3489;
+    
+    /* Coral theme */
+    --coral: #D85A30;
+    --coral-light: #FAECE7;
+    --coral-mid: #F5C4B3;
+    --coral-dark: #993C1D;
+    
+    /* Green/Teal theme */
+    --teal: #1D9E75;
+    --teal-light: #E1F5EE;
+    --teal-dark: #0F6E56;
+    --green: #639922;
+    --green-light: #EAF3DE;
+    --green-dark: #27500A;
+    
+    /* Blue theme */
+    --blue: #378ADD;
+    --blue-light: #E6F1FB;
+    --blue-dark: #0C447C;
+    
+    /* Amber theme */
+    --amber: #BA7517;
+    --amber-light: #FAEEDA;
+    --amber-mid: #FAC775;
+    
+    /* Neutrals */
+    --gray-light: #f5f5f0;
+    --gray-mid: #e0e0e0;
+    --gray-dark: #666;
+    --text-dark: #1a1a1a;
+    --text-mid: #555;
+    --text-light: #999;
+    
+    /* Spacing */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+    --shadow-md: 0 2px 8px rgba(0,0,0,0.1);
+    --shadow-lg: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* ────────────────────────────────────────────────── */
+/* Typography
+/* ────────────────────────────────────────────────── */
+
+.main-title {
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: -0.4px;
+    margin-bottom: 4px;
+    color: var(--text-dark);
+}
+
+.main-subtitle {
+    font-size: 14px;
+    color: var(--gray-dark);
+    margin-bottom: 2rem;
+}
+
+/* ────────────────────────────────────────────────── */
+/* Agent Badge
+/* ────────────────────────────────────────────────── */
+
+.agent-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: var(--radius-lg);
+    background: var(--green-light);
+    color: var(--green-dark);
+    margin-bottom: 10px;
+}
+
+.agent-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--green);
+    animation: pulse 1.8s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+}
+
+/* ────────────────────────────────────────────────── */
+/* Cards
+/* ────────────────────────────────────────────────── */
+
+.ui-card {
+    background: #fff;
+    border: 0.5px solid var(--gray-mid);
+    border-radius: var(--radius-md);
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+    transition: box-shadow 0.2s ease;
+}
+
+.ui-card:hover {
+    box-shadow: var(--shadow-sm);
+}
+
+.card-purple {
+    border-top: 3px solid #7F77DD;
+}
+
+.card-coral {
+    border-top: 3px solid var(--coral);
+}
+
+.card-green {
+    border-top: 3px solid var(--teal);
+}
+
+/* Card Labels */
+.card-label {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.label-purple {
+    color: var(--purple);
+}
+
+.label-coral {
+    color: var(--coral-dark);
+}
+
+.label-green {
+    color: var(--teal-dark);
+}
+
+/* ────────────────────────────────────────────────── */
+/* File Items
+/* ────────────────────────────────────────────────── */
+
+.file-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 10px;
+    background: var(--purple-light);
+    border-radius: var(--radius-sm);
+    font-size: 13px;
+    border: 0.5px solid #CECBF6;
+    margin-bottom: 6px;
+}
+
+.file-name {
+    flex: 1;
+    color: var(--purple-dark);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.file-size {
+    font-size: 11px;
+    color: var(--purple-mid);
+    flex-shrink: 0;
+}
+
+/* ────────────────────────────────────────────────── */
+/* Chips / Tags
+/* ────────────────────────────────────────────────── */
+
+.chip-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 10px 0;
+}
+
+.chip {
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: var(--radius-lg);
+    border: 0.5px solid var(--coral-mid);
+    color: #712B13;
+    background: var(--coral-light);
+    display: inline-block;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.chip.active {
+    background: var(--coral);
+    color: var(--coral-light);
+    border-color: var(--coral-dark);
+}
+
+.chip:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-sm);
+}
+
+/* ────────────────────────────────────────────────── */
+/* Results Section
+/* ────────────────────────────────────────────────── */
+
+.results-header {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 20px 0 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Candidate Cards */
+.candidate-card {
+    background: #fff;
+    border: 0.5px solid var(--gray-mid);
+    border-radius: var(--radius-md);
+    padding: 1.25rem;
+    margin-bottom: 15px;
+    transition: all 0.2s ease;
+}
+
+.candidate-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.candidate-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.candidate-info {
+    flex: 1;
+}
+
+.candidate-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.candidate-filename {
+    font-size: 12px;
+    color: var(--text-light);
+    margin-top: 4px;
+}
+
+/* Rank Badges */
+.rank-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 18px;
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-right: 10px;
+}
+
+.rank-1-badge {
+    background: var(--green);
+    color: white;
+}
+
+.rank-2-badge {
+    background: var(--blue);
+    color: white;
+}
+
+.rank-3-badge {
+    background: var(--amber);
+    color: white;
+}
+
+.rank-other-badge {
+    background: #D3D1C7;
+    color: #444;
+}
+
+/* Recommendation Badges */
+.recommendation-badge {
+    font-size: 11px;
+    padding: 4px 12px;
+    border-radius: var(--radius-lg);
+    font-weight: 600;
+    display: inline-block;
+}
+
+.recommend-hire {
+    background: var(--green-light);
+    color: var(--green-dark);
+}
+
+.recommend-maybe {
+    background: var(--amber-light);
+    color: var(--amber);
+}
+
+.recommend-nohire {
+    background: var(--coral-light);
+    color: #712B13;
+}
+
+/* Score Section */
+.score-section {
+    margin: 15px 0;
+}
+
+.score-bar-container {
+    background: #f0f0f0;
+    border-radius: 10px;
+    height: 8px;
+    overflow: hidden;
+}
+
+.score-bar-fill {
+    background: var(--green);
+    height: 100%;
+    border-radius: 10px;
+    transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.score-text {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    font-size: 13px;
+    color: var(--gray-dark);
+}
+
+.score-value {
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.score-high {
+    color: var(--green);
+}
+
+.score-mid {
+    color: var(--blue);
+}
+
+.score-low {
+    color: var(--amber);
+}
+
+/* ────────────────────────────────────────────────── */
+/* Rubric Table
+/* ────────────────────────────────────────────────── */
+
+.rubric-table {
+    width: 100%;
+    margin-top: 15px;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.rubric-table th {
+    text-align: left;
+    padding: 8px;
+    background: var(--gray-light);
+    font-weight: 600;
+}
+
+.rubric-table td {
+    padding: 8px;
+    border-bottom: 0.5px solid var(--gray-mid);
+    vertical-align: top;
+}
+
+.dimension-score {
+    font-weight: 700;
+    text-align: center;
+    width: 60px;
+}
+
+/* ────────────────────────────────────────────────── */
+/* Buttons
+/* ────────────────────────────────────────────────── */
+
+.stButton > button {
+    width: 100%;
+    padding: 12px !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    border-radius: var(--radius-sm) !important;
+    background: var(--purple) !important;
+    color: white !important;
+    border: none !important;
+    transition: all 0.2s ease !important;
+}
+
+.stButton > button:hover {
+    opacity: 0.88;
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-sm);
+}
+
+.stButton > button:active {
+    transform: translateY(0);
+}
+
+/* ────────────────────────────────────────────────── */
+/* Expander
+/* ────────────────────────────────────────────────── */
+
+.streamlit-expanderHeader {
+    font-size: 13px;
+    color: var(--purple);
+    font-weight: 500;
+}
+
+.streamlit-expanderHeader:hover {
+    color: var(--purple-dark);
+}
+
+/* ────────────────────────────────────────────────── */
+/* Dividers
+/* ────────────────────────────────────────────────── */
+
+.divider {
+    height: 1px;
+    background: var(--gray-mid);
+    margin: 15px 0;
+}
+
+/* ────────────────────────────────────────────────── */
+/* Progress Bar (Streamlit override)
+/* ────────────────────────────────────────────────── */
+
+.stProgress > div > div {
+    background-color: var(--green) !important;
+}
+
+/* ────────────────────────────────────────────────── */
+/* Alert/Message Styling
+/* ────────────────────────────────────────────────── */
+
+.stAlert {
+    border-radius: var(--radius-sm) !important;
+}
+
+/* ────────────────────────────────────────────────── */
+/* Sidebar Styling
+/* ────────────────────────────────────────────────── */
+
+.css-1d391kg, .css-12oz5g7 {
+    background: #fff;
+}
+
+.sidebar-content {
+    padding: 1rem;
+}
+
+/* ────────────────────────────────────────────────── */
+/* Responsive Design
+/* ────────────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+    .block-container {
+        padding-top: 1rem !important;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+    
+    .candidate-header {
+        flex-direction: column;
+    }
+    
+    .rank-badge {
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
+    }
+    
+    .candidate-name {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 24px;
+    }
+    
+    .ui-card {
+        padding: 1rem;
+    }
+    
+    .chip {
+        font-size: 11px;
+        padding: 3px 8px;
+    }
+}
+
+/* ────────────────────────────────────────────────── */
+/* Loading Animation
+/* ────────────────────────────────────────────────── */
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.loading-spinner {
+    animation: spin 1.2s linear infinite;
+}
+
+/* ────────────────────────────────────────────────── */
+/* Tooltips
+/* ────────────────────────────────────────────────── */
+
+[data-tooltip] {
+    position: relative;
+    cursor: help;
+}
+
+[data-tooltip]:before {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 4px 8px;
+    background: var(--text-dark);
+    color: white;
+    font-size: 11px;
+    border-radius: 4px;
+    white-space: nowrap;
+    display: none;
+    z-index: 1000;
+}
+
+[data-tooltip]:hover:before {
+    display: block;
+}
+
+/* ────────────────────────────────────────────────── */
+/* Custom Scrollbar
+/* ────────────────────────────────────────────────── */
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--gray-light);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--gray-mid);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--gray-dark);
+}

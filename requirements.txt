@@ -1,0 +1,13 @@
+Flask
+Flask-Cors
+flask-limiter
+groq
+pydantic
+PyPDF2
+python-dotenv
+python-docx
+reportlab
+Requests
+scikit-learn
+sentence-transformers
+Werkzeug

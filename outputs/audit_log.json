@@ -1,0 +1,4 @@
+{"event": "resume_analyzed", "candidate": "Fro**************************", "score": 92.5, "recommendation": "Hire", "low_confidence": false, "timestamp": "2026-05-11 14:15:49.313505"}
+{"event": "resume_analyzed", "candidate": "ML_*******************", "score": 12.5, "recommendation": "No Hire", "low_confidence": false, "timestamp": "2026-05-11 14:15:50.152275"}
+{"event": "resume_analyzed", "candidate": "Fro**************************", "score": 12.5, "recommendation": "No Hire", "low_confidence": false, "timestamp": "2026-05-11 14:56:16.564881"}
+{"event": "resume_analyzed", "candidate": "ML_*******************", "score": 100.0, "recommendation": "Hire", "low_confidence": false, "timestamp": "2026-05-11 14:56:17.451123"}
